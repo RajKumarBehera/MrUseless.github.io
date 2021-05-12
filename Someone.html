@@ -1,0 +1,73 @@
+<html>
+<head>
+	<script>
+		
+		function d(val){
+			document.getElementById('result').value+=val;
+		}
+		function solve(){
+			var value1= document.getElementById('result').value;
+			let res = eval(value1);
+			document.getElementById('result').value=res;	
+		}
+		functioncleard(){
+		document.getElementById('result').value="";
+		}
+			
+	</script>
+
+	<style type="text/css">
+		body,html{
+			matgin:0px;
+		}
+		input[type="button"]{
+			border:none;
+			width:100%;
+			outline: none;
+		}
+		#wrap
+		{
+			margin:10%;
+		}
+	</style>
+</head>
+<body>
+	<div id='wrap'>
+	<table border="1">
+ 
+<form name="cal">
+<tr>
+ <td><input type ="text" name ="display"> </td>
+		
+			<td colspan="3"><input type="text" id="result" readonly></td>
+			<td><input type="button" value="C"  onClick="cleard()"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1" onClick="cal.display.value+='1'"></td>
+			<td><input type="button" value="2" onClick="cal.display.value+='2'"></td>
+			<td><input type="button" value="3" onClick="cal.display.value+='3'"></td>
+			<td><input type="button" value="+" onClick="cal.display.value+='+'"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4" onClick="cal.display.value+='4'"></td>
+			<td><input type="button" value="5" onClick="cal.display.value+='5'"></td>
+			<td><input type="button" value="6" onClick="cal.display.value+='6'"></td>
+			<td><input type="button" value="-" onClick="cal.display.value+='-'"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="7" onClick="cal.display.value+='7'"></td>
+			<td><input type="button" value="8" onClick="cal.display.value+='8'"></td>
+			<td><input type="button" value="9" onClick="cal.display.value+='9'"></td>
+			<td><input type="button" value="/" onClick="cal.display.value+='/'"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="*" onClick="cal.display.value+='*'"></td>
+			<td><input type="button" value="0" onClick="cal.display.value+='0'"></td>
+			<td><input type="button" value="." onClick="cal.display.value+='.'"></td>
+			<td><input type="button" value="=" onClick="cal.display.value =eval(cal.display.value)"></td>
+		</tr>
+</form>
+	</table>
+	</div>
+</body>
+</html>
